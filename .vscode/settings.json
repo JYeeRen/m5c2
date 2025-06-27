@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "board.h": "c",
+        "i2c_device.h": "c",
+        "pmu.h": "c"
+    }
+}
