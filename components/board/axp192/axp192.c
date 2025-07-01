@@ -177,7 +177,22 @@ void Axp192_IsBatIn() {
 }
  
 void Axp192_IsCharging() {
+    // 调用 Axp192_GetChargeStatus 函数获取充电状态
+    uint8_t charging = Axp192_GetChargeStatus();
+    // 这里可以根据需要添加其他处理逻辑
+    // 例如：打印充电状态、控制LED等
+}
 
+/**
+  * @brief  获取充电状态
+  * @retval 1: 正在充电, 0: 未充电
+  */
+uint8_t Axp192_GetChargeStatus(void)
+{
+    // 读取充电状态寄存器 (0x01)
+    uint8_t reg_value = Axp192_Read8Bit(AXP192_CHG_BOOL_REG);
+    // 检查第7位 (bit7) 是否为1，表示正在充电
+    return (reg_value >> 7) & 0x01;
 }
 
 void Axp192_PowerOff() {

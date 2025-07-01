@@ -1,0 +1,5 @@
+dependencies:
+  lvgl/lvgl:
+    version: "^9.3.0"
+    rules:
+      - if: "idf_version >=4.4.0" 

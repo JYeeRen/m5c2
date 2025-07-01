@@ -421,6 +421,12 @@ void Axp192_IsBatIn();
 void Axp192_IsCharging();
 
 /**
+ * @brief 获取充电状态
+ * @retval 1: 正在充电, 0: 未充电
+ */
+uint8_t Axp192_GetChargeStatus(void);
+
+/**
  * @brief Powers down the device.
  * 
  * @note Since the microcontroller and all the peripherals 

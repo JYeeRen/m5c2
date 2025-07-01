@@ -51,3 +51,5 @@ void Core2ForAWS_PMU_Init(uint16_t ldo2_volt, uint16_t ldo3_volt, uint16_t dc2_v
     Axp192_SetGPIO1Mode(1);
     Core2ForAWS_PMU_SetPowerIn(0);
 }
+
+

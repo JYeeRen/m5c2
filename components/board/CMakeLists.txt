@@ -14,8 +14,11 @@ list(APPEND COMPONENT_ADD_INCLUDEDIRS _pmu)
 list(APPEND COMPONENT_SRCDIRS _motor)
 list(APPEND COMPONENT_ADD_INCLUDEDIRS _motor)
 
+list(APPEND COMPONENT_SRCDIRS ili9341)
+list(APPEND COMPONENT_ADD_INCLUDEDIRS ili9341)
+
 idf_component_register(
     INCLUDE_DIRS ${COMPONENT_ADD_INCLUDEDIRS}
     SRC_DIRS ${COMPONENT_SRCDIRS}
-    REQUIRES esp_driver_gpio driver
+    REQUIRES esp_driver_gpio driver spi_flash esp_timer esp_wifi nvs_flash
 )

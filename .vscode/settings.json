@@ -2,6 +2,12 @@
     "files.associations": {
         "board.h": "c",
         "i2c_device.h": "c",
-        "pmu.h": "c"
-    }
+        "pmu.h": "c",
+        "disp_driver.h": "c",
+        "ili9341.h": "c",
+        "esp_lcd_ili9341.h": "c",
+        "lvgl.h": "c",
+        "disp_spi.h": "c"
+    },
+    "idf.pythonInstallPath": "/opt/homebrew/bin/python3"
 }
